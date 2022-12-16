@@ -69,3 +69,11 @@
         border-style: solid;
         border-color:hsl(189, 41%, 97%) ;
     }
+
+    #Custom{
+        height: 25px;
+        width: 60px;
+        background-color: hsl(189, 41%, 97%) ;
+        border-radius: 5px;
+        border-color: #ffffff;
+    }
