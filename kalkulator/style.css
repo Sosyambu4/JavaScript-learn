@@ -1,0 +1,28 @@
+.container{
+    padding: auto;
+    width: 550px;
+    height: 300px;
+    border-radius: 15px ;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;}
+
+    .block_result{
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+        width: 230px;
+        height: 260px;
+        border-radius: 10px;
+        background-color: hsl(183, 100%, 15%);
+        padding-left: 20px;
+    }
+    .result_reset{
+        width: 210px;
+        height: 35px;
+        background-color: hsl(172, 67%, 45%);
+        border-radius: 8px;
+        border-color:  hsl(183, 100%, 15%);
+    }
