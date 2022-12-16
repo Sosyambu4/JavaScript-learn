@@ -41,3 +41,31 @@
         grid-template-rows: 1fr 1fr;
         gap: 8px;
     }
+
+    .input_value{
+        color: hsl(183, 100%, 15%);
+        font-size: medium;
+        border: 1px solid rgb(245, 242, 242);
+        padding: 5px 5px 5px 40px;
+        height: 20px;
+        width: 200px;
+        background: url(img/icon-dollar.svg) no-repeat 2px 8px;
+        background-size: auto 45%;
+        border-radius: 5px;
+        border-style: solid;
+        border-color:hsl(189, 41%, 97%) ;
+        text-align: end;
+    }
+
+    .input_number{
+        border: 1px solid rgb(253, 253, 253);
+        padding: 5px 5px 5px 40px;
+        width: 200px;
+        height: 20px;
+        background: url(img/icon-person.svg) no-repeat 2px 8px;
+        background-size: auto 45%;
+        text-align: end;
+        border-radius: 5px;
+        border-style: solid;
+        border-color:hsl(189, 41%, 97%) ;
+    }
