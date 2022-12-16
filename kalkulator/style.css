@@ -26,3 +26,18 @@
         border-radius: 8px;
         border-color:  hsl(183, 100%, 15%);
     }
+
+    .block_button{
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(183, 100%, 15%) ;
+        border-radius: 5px;
+        width: 70px;
+        height: 30px;
+    }
+    
+    .container_button{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 8px;
+    }
