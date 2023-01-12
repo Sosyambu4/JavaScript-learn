@@ -1,0 +1,95 @@
+body{
+    padding: 100px 0px 0px 250px;
+    background-image: url(https://gamerwall.pro/uploads/posts/2022-03/1647874838_1-gamerwall-pro-p-krasivii-sinii-fon-krasivie-1.jpg);
+}
+
+.container_main{
+ color: aliceblue;
+ display: inline-flex;
+ width: 600px;
+ height: auto;
+ background-color: aqua;
+ padding: 45px;
+ border-radius: 25px ;
+ background-image: url(https://bipbap.ru/wp-content/uploads/2017/05/01101425.jpg);
+}
+
+.container_input{
+    width:600px ;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 25px 45px;
+    color: aliceblue;
+    
+    
+}
+
+.form-control{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    color:aliceblue;
+    background-image: url(https://abrakadabra.fun/uploads/posts/2022-02/1645547650_1-abrakadabra-fun-p-krasivii-fon-dlya-teksta-temnii-1.jpg);
+    font-size: large;
+}
+
+
+.main_img img{
+    width: 120px;
+    height: 120px;
+    border-radius: grey 6px;
+    box-shadow: 0 0 0 1px ;
+    display: inline-block;
+    flex-shrink: 0;
+    line-height: 1;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 250px;
+}
+
+.main_img{
+    padding: 50px 0px 0px 30px;
+}
+
+.main_info{
+    padding-left: 40px;
+}
+
+.main_info_name h1{
+font-size: 24px;
+}
+
+.main_info_follower{
+    display: flex;
+    gap: 15px;
+}
+
+
+.main_info_repo{
+display:flex;
+  justify-content:space-around;
+  align-items:center;
+  flex-wrap:wrap;
+  line-height: 25px;
+  color: aliceblue;
+}
+
+.main_link a{
+    padding: 0px 0px 0px 10px;
+    gap: 10px;
+    color: aliceblue;
+    line-height: 15px;
+    
+}
+
+.main_link{
+    padding-top: 25px;
+    line-height: 25px; 
+}
+
+.reset input{
+    padding-left: 5px;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+}

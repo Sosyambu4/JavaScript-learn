@@ -1,0 +1,1 @@
+export default document.querySelector(".container_main");

@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
     <title>Document</title>
-</head>
-<body>
-    <P>Hello Wlada</P>
-    <script src="/js/scripts.js"></script>
-</body>
+  </head>
+  <body>
+    <div class="container_input">
+      <form role="search" id="form">
+        <input
+          class="form-control"
+          type="search"
+          placeholder="Search o Github User"
+          aria-label="Search"
+          id="search" />
+          
+      </form>
+     
+    </div>
+    <div class="container_main">
+        <div class="main_img">
+            <img class="profileImage"/>
+        </div>
+        <div class="main_info">
+          <div class="main_info_name">
+            <h1 class="profileName">UserName</h1>
+            <p class="description">Description not provided</p>
+          </div>
+          <div class="main_info_follower">
+              <div class="main_followers">
+                <span id="numberFollower">0</span>
+                <span id="textSocial">Followers</span>
+              </div>
+              <div class="main_following">
+                <span id="numberFollowing">0</span>
+                <span id="textSocial">Following</span>
+              </div>
+              <div class="main_repos">
+                <span id="numberRepos">0</span>
+                <span id="textSocial">Repos</span>
+              </div>
+          </div>
+          <div class="main_info_repo">
+           
+          </div>
+          <div class="main_link"></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
