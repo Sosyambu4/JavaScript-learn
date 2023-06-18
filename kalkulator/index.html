@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Kalkulator</title>
+  </head>
+  <body><div class="container">
+    <div class="block_select">
+      <div class="block_input">
+        <p class="text_dark">Bill</p>
+       <input  class="input_value" id="orderPrice" type="text"  > 
+        
+      </div>
+      <p class="text_dark">Select tip %</p>
+      
+      <div class="container_button">
+       <input  type="button" value="5" class="block_button" id="five" placeholder="5%"> 
+         <input  type="button" value="10" class="block_button" id="10%">
+         <input  type="button" value="15" class="block_button" id="15%">
+         <input  type="button" value="25" class="block_button" id="25%">
+         <input  type="button" value="50" class="block_button" id="50%">
+         <input   id="Custom" placeholder="Custom"></input>
+      </div>
+      <div class="block_inputPeople">
+        <p class="text_dark">Number of People      <span id="error"></span></p>
+        <input  class="input_number" id="peopleNumber" type="text">
+      </div>
+    </div>
+    <div class="block_result">
+      <div class="result_block">
+        <div class="result_tip">
+          <p>Tip Amount</p>
+          <p class="person">/ person</p>
+        </div>
+        <div class="result_total">
+          <p>Total</p>
+          <p class="person">/ person</p>
+        </div>
+      </div>
+      <div class="result_summ">
+        <p id="summ_1">$0.00</p>
+        <p id="summ_2">$0.00</p>
+      </div>
+      <div class="result_button">
+        <input  type="button" id="submit" class="result_reset" value="RESET" disabled></div>
+    </div>
+  </div>
+  
+  <script src='/kalkulator/script.js'></script></body>
+</html>
