@@ -56,13 +56,46 @@ function updateCart() {
 }
 
 function checkout() {
-  // Здесь можно добавить логику оформления заказа
-  // Можно использовать Ajax запросы для отправки данных на сервер
+  // Check if the cart is empty
+  if (cartItems.length === 0) {
+    alert("Ваша корзина пуста. Добавьте товары перед оформлением заказа.");
+    return;
+  }
 
-  // Пример очистки корзины
-  cartItems = [];
-  totalPrice = 0;
+  // Prepare the cart data to send to the server
+  var cartData = {
+    items: cartItems,
+    totalPrice: totalPrice,
+  };
 
-  updateCart();
-  alert("Заказ оформлен!");
+  // Simulate an AJAX request to send the cart data to the server
+  // Replace this with your actual AJAX request
+  simulateAjaxRequest("/placeOrder", cartData)
+    .then(function (response) {
+      // Clear the cart and reset the total price upon successful order placement
+      cartItems = [];
+      totalPrice = 0;
+
+      updateCart();
+      alert("Заказ оформлен! Номер заказа: " + response.orderNumber);
+    })
+    .catch(function (error) {
+      alert("Произошла ошибка при оформлении заказа. Пожалуйста, попробуйте еще раз.");
+      console.error(error);
+    });
+}
+
+// Function to simulate an asynchronous AJAX request
+function simulateAjaxRequest(url, data) {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      // Simulate a successful response after a delay
+      // Replace this with your actual AJAX implementation
+      var response = {
+        orderNumber: "123456789",
+      };
+
+      resolve(response);
+    }, 2000); // Simulate a 2-second delay
+  });
 }
