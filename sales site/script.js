@@ -48,6 +48,19 @@ function updateCart() {
 
     var li = document.createElement("li");
     li.textContent = item.name + " x " + item.quantity + " - " + item.price + " рублей";
+
+    var removeButton = document.createElement("button");
+    removeButton.textContent = "DELETE";
+    removeButton.addEventListener(
+      "click",
+      (function (productId) {
+        return function () {
+          removeFromCart(productId);
+        };
+      })(item.id)
+    );
+
+    li.appendChild(removeButton);
     cartItemsElement.appendChild(li);
   }
 
@@ -98,4 +111,16 @@ function simulateAjaxRequest(url, data) {
       resolve(response);
     }, 2000); // Simulate a 2-second delay
   });
+}
+
+function removeFromCart(productId) {
+  var itemIndex = cartItems.findIndex(function (item) {
+    return item.id === productId;
+  });
+
+  if (itemIndex !== -1) {
+    var removedItem = cartItems.splice(itemIndex, 1)[0];
+    totalPrice -= removedItem.price * removedItem.quantity;
+    updateCart();
+  }
 }
