@@ -1,104 +1,107 @@
+/* Стили для общего контейнера */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: #f2f2f2;
 }
 
 h1 {
   text-align: center;
-  color: #333;
-  margin-bottom: 40px;
 }
 
-.product {
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 20px;
+/* Стили для личного кабинета */
+#personalInfo {
   margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+#usernameLabel {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#loginForm {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Стили для продуктов */
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .product img {
-  max-width: 100%;
-  display: block;
+  max-width: 200px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  animation: zoomIn 0.5s ease-in-out;
 }
 
 .product h2 {
-  text-align: center;
-  margin-top: 10px;
-  color: #333;
+  margin-bottom: 5px;
 }
 
 .product p {
   text-align: center;
-  color: #777;
   margin-bottom: 10px;
 }
 
 .product button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  animation: slideIn 0.5s ease-in-out;
 }
 
-.product button:hover {
-  background-color: #45a049;
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-#cart {
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 40px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
-#cart h2 {
-  margin-bottom: 10px;
-  color: #333;
-}
-
-#cart ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-#cart li {
-  margin-bottom: 10px;
-  color: #777;
-}
-
-#cart p {
-  margin-top: 20px;
-  color: #333;
-}
-
-#totalPrice {
-  font-weight: bold;
-}
-
-#cart button {
-  display: block;
-  margin: 20px auto 0;
-  padding: 10px 20px;
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#cart button:hover {
-  background-color: #d32f2f;
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }

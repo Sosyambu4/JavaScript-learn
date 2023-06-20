@@ -9,6 +9,17 @@
 <body>
   <h1>Магазин продаж</h1>
   
+  <div id="personalInfo" style="display: none;">
+    <p id="usernameLabel"></p>
+    <button onclick="logout()">Выйти</button>
+  </div>
+  
+  <div id="loginForm">
+    <h2>Вход</h2>
+    <input type="text" id="usernameInput" placeholder="Имя пользователя" />
+    <input type="password" id="passwordInput" placeholder="Пароль" />
+    <button onclick="login()">Войти</button>
+  </div>
   <div class="product">
     <img src="product1.jpg" alt="Продукт 1">
     <h2>Продукт 1</h2>
