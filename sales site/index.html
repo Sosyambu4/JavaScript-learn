@@ -5,9 +5,55 @@
     <link rel="stylesheet" type="text/css" href="/sales site/styles.css" />
   </head>
   <body>
+<<<<<<< HEAD
+</head>
+<body>
+  <h1>Магазин продаж</h1>
+  
+  <div id="personalInfo" style="display: none;">
+    <p id="usernameLabel"></p>
+    <button onclick="logout()">Выйти</button>
+  </div>
+  
+  <div id="loginForm">
+    <h2>Вход</h2>
+    <input type="text" id="usernameInput" placeholder="Имя пользователя" />
+    <input type="password" id="passwordInput" placeholder="Пароль" />
+    <button onclick="login()">Войти</button>
+  </div>
+  <div class="product">
+    <img src="product1.jpg" alt="Продукт 1">
+    <h2>Продукт 1</h2>
+    <p>Описание продукта 1</p>
+    <button onclick="addToCart(1)">Добавить в корзину</button>
+  </div>
+  
+  <div class="product">
+    <img src="product2.jpg" alt="Продукт 2">
+    <h2>Продукт 2</h2>
+    <p>Описание продукта 2</p>
+    <button onclick="addToCart(2)">Добавить в корзину</button>
+  </div>
+  
+  <div class="product">
+    <img src="product3.jpg" alt="Продукт 3">
+    <h2>Продукт 3</h2>
+    <p>Описание продукта 3</p>
+    <button onclick="addToCart(3)">Добавить в корзину</button>
+  </div>
+  
+  <div id="cart">
+    <h2>Корзина</h2>
+    <ul id="cartItems"></ul>
+    <p>Итого: <span id="totalPrice">0</span> рублей</p>
+    <button onclick="checkout()">Оформить заказ</button>
+  </div>
+  
+=======
     <header class="header">
       <h1>Магазин продаж</h1>
     </header>
+>>>>>>> eb391e0656d78367204c43870aec4b2347eb5892
 
     <div id="cart" class="cart">
       <h2>Корзина</h2>

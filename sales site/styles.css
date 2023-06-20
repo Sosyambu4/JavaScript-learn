@@ -1,3 +1,73 @@
+<<<<<<< HEAD
+/* Стили для общего контейнера */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Стили для личного кабинета */
+#personalInfo {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+#usernameLabel {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#loginForm {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Стили для продуктов */
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.product img {
+  max-width: 200px;
+  margin-bottom: 10px;
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+.product h2 {
+=======
 /* Header styles */
 .header {
   background-color: #222;
@@ -25,16 +95,52 @@
 .product h2 {
   font-size: 18px;
   margin-top: 10px;
+>>>>>>> eb391e0656d78367204c43870aec4b2347eb5892
   margin-bottom: 5px;
 }
 
 .product p {
+<<<<<<< HEAD
+  text-align: center;
+=======
   font-size: 14px;
   color: #555;
+>>>>>>> eb391e0656d78367204c43870aec4b2347eb5892
   margin-bottom: 10px;
 }
 
 .product button {
+<<<<<<< HEAD
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+=======
   display: block;
   background-color: #ce3d3d;
   color: #fff;
@@ -94,4 +200,5 @@
 
 .cart .checkout-button:hover {
   background-color: #a63131;
+>>>>>>> eb391e0656d78367204c43870aec4b2347eb5892
 }

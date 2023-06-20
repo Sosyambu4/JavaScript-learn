@@ -124,3 +124,95 @@ function removeFromCart(productId) {
     updateCart();
   }
 }
+
+var currentUser = null;
+
+function login(username, password) {
+  // Здесь может быть логика аутентификации пользователя
+  // Можно использовать Ajax запросы для проверки данных на сервере
+
+  // Пример проверки логина и пароля
+  if (username === "admin" && password === "password") {
+    currentUser = {
+      username: username,
+      // Дополнительные данные о пользователе, если необходимо
+    };
+    showLoggedInView();
+  } else {
+    alert("Неверное имя пользователя или пароль");
+  }
+}
+
+function logout() {
+  currentUser = null;
+  showLoggedOutView();
+}
+
+function showLoggedInView() {
+  // Показать элементы интерфейса, доступные только авторизованным пользователям
+  var loginForm = document.getElementById("loginForm");
+  loginForm.style.display = "none";
+
+  var logoutButton = document.getElementById("logoutButton");
+  logoutButton.style.display = "block";
+
+  var personalInfo = document.getElementById("personalInfo");
+  personalInfo.textContent = "Добро пожаловать, " + currentUser.username + "!";
+  personalInfo.style.display = "block";
+}
+
+function showLoggedOutView() {
+  // Показать элементы интерфейса для неавторизованных пользователей
+  var loginForm = document.getElementById("loginForm");
+  loginForm.style.display = "block";
+
+  var logoutButton = document.getElementById("logoutButton");
+  logoutButton.style.display = "none";
+
+  var personalInfo = document.getElementById("personalInfo");
+  personalInfo.style.display = "none";
+}
+
+function showLoggedInView() {
+  var loginForm = document.getElementById("loginForm");
+  loginForm.style.display = "none";
+
+  var personalInfo = document.getElementById("personalInfo");
+  personalInfo.style.display = "block";
+
+  var usernameLabel = document.getElementById("usernameLabel");
+  usernameLabel.textContent = "Добро пожаловать, " + currentUser.username + "!";
+}
+
+function showLoggedOutView() {
+  var loginForm = document.getElementById("loginForm");
+  loginForm.style.display = "block";
+
+  var personalInfo = document.getElementById("personalInfo");
+  personalInfo.style.display = "none";
+}
+
+function login() {
+  var usernameInput = document.getElementById("usernameInput").value;
+  var passwordInput = document.getElementById("passwordInput").value;
+
+  // Ваша логика аутентификации, например, проверка на сервере
+
+  if (usernameInput === "admin" && passwordInput === "password") {
+    currentUser = {
+      username: usernameInput,
+    };
+    showLoggedInView();
+  } else {
+    alert("Неверное имя пользователя или пароль");
+  }
+
+  // Очистить поля ввода
+  document.getElementById("usernameInput").value = "";
+  document.getElementById("passwordInput").value = "";
+}
+
+function logout() {
+  currentUser = null;
+  showLoggedOutView();
+}
